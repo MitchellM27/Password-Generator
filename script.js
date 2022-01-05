@@ -36,6 +36,9 @@ function generatePassword () {
     //creating else if statements based on which parameters the user has chosen.
     if (userUpper == true && userLower == true && userSpecial == true && userNumber == true) {
         
+    //validating the user's input.
+        confirm ('Your password will contain upper case letters, lower case letters, special characters, and numbers.');
+        
     //creating a loop associated with the number of characters the user has chosen.
         for (i=0; i< lengthVal; i++){
 
@@ -50,6 +53,8 @@ function generatePassword () {
         }
 
     } else if (userUpper == true && userLower == false && userSpecial == true && userNumber == false) {
+
+        confirm ('Your password will contain upper case letters, and special characters');
         
         for (i=0; i< lengthVal; i++){
 
@@ -62,6 +67,8 @@ function generatePassword () {
         }
 
     } else if (userUpper == true && userLower == false && userSpecial == false && userNumber == true) {
+
+        confirm ('Your password will contain upper case letters, and numbers.');
         
         for (i=0; i< lengthVal; i++){
 
@@ -74,6 +81,8 @@ function generatePassword () {
         }
 
     }else if (userUpper == true && userLower == true && userSpecial == true && userNumber == false) {
+
+        confirm ('Your password will contain upper case letters, lower case letters, and special characters.');
         
         for (i=0; i< lengthVal; i++){
 
@@ -86,6 +95,8 @@ function generatePassword () {
         }
 
     } else if (userUpper == true && userLower == true && userSpecial == false && userNumber == false) {
+
+        confirm ('Your password will contain upper case letters, and lower case letters.');
         
         for (i=0; i< lengthVal; i++){
 
@@ -98,6 +109,8 @@ function generatePassword () {
         }
 
     } else if (userUpper == true && userLower == false && userSpecial == false && userNumber == false) {
+
+        confirm ('Your password will contain upper case letters.');
         
         for (i=0; i< lengthVal; i++){
 
@@ -110,6 +123,8 @@ function generatePassword () {
         }
 
     } else if (userUpper == false && userLower == true && userSpecial == true && userNumber == true) {
+
+        confirm ('Your password will contain lower case letters, special characters, and numbers.');
         
         for (i=0; i< lengthVal; i++){
 
@@ -122,6 +137,8 @@ function generatePassword () {
         }
 
     } else if (userUpper == false && userLower == true && userSpecial == false && userNumber == true) {
+
+        confirm ('Your password will contain lower case letters, and numbers.');
         
         for (i=0; i< lengthVal; i++){
 
@@ -134,6 +151,8 @@ function generatePassword () {
         }
 
     } else if (userUpper == false && userLower == true && userSpecial == false && userNumber == false) {
+
+        confirm ('Your password will contain lower case letters.');
         
         for (i=0; i< lengthVal; i++){
 
@@ -146,6 +165,8 @@ function generatePassword () {
         }
 
     } else if (userUpper == false && userLower == true && userSpecial == true && userNumber == false) {
+
+        confirm ('Your password will contain lower case letters, and special characters.');
         
         for (i=0; i< lengthVal; i++){
 
@@ -158,6 +179,8 @@ function generatePassword () {
         }
 
     } else if (userUpper == false && userLower == false && userSpecial == true && userNumber == true) {
+
+        confirm ('Your password will contain special characters, and numbers.');
         
         for (i=0; i< lengthVal; i++){
 
@@ -170,6 +193,8 @@ function generatePassword () {
         }
 
     } else if (userUpper == false && userLower == false && userSpecial == true && userNumber == false) {
+
+        confirm ('Your password will contain special characters.');
         
         for (i=0; i< lengthVal; i++){
 
@@ -182,6 +207,8 @@ function generatePassword () {
         }
 
     } else if (userUpper == false && userLower == false && userSpecial == false && userNumber == true) {
+
+        confirm ('Your password will contain numbers.');
         
         for (i=0; i< lengthVal; i++){
 
