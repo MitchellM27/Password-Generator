@@ -13,17 +13,22 @@ function generatePassword () {
 
     //ensuring that the user inputs a value within the parameters of the password's capabilities.
     if (lengthVal < 8 || lengthVal > 128) {
-        confirm('Please choose a number between 8-128.');
+        confirm('Please try again with a number between 8-128.');
+        return null;
+    } else if (isNaN (lengthVal) == true) {
+        confirm ('Please try again with a number between 8-128.');
         return null;
     }
 
-        
+    console.log (typeof lengthVal);
+    console.log (lengthVal);
+
 
   
-    var userUpper = confirm ('Would you like upper case letters in the password');
-    var userLower = confirm ('Would you like lower case letters in the password');
-    var userSpecial = confirm ('Would you like special characters in the password');
-    var userNumber = confirm ('Would you like numbers in the password');
+    var userUpper = confirm ('Would you like upper case letters in the password?');
+    var userLower = confirm ('Would you like lower case letters in the password?');
+    var userSpecial = confirm ('Would you like special characters in the password?');
+    var userNumber = confirm ('Would you like numbers in the password?');
 
    
 
