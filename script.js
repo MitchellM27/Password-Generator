@@ -20,43 +20,36 @@ function generatePassword () {
         return null;
     }
 
-    console.log (typeof lengthVal);
-    console.log (lengthVal);
 
-
-  
     var userUpper = confirm ('Would you like upper case letters in the password?');
     var userLower = confirm ('Would you like lower case letters in the password?');
     var userSpecial = confirm ('Would you like special characters in the password?');
     var userNumber = confirm ('Would you like numbers in the password?');
 
-   
 
-
-
-    
     //creating an empty string for the looped contents to be stored in.    
     let pass = '';
 
     //creating else if statements based on which parameters the user has chosen.
     if (userUpper == true && userLower == true && userSpecial == true && userNumber == true) {
         
-    //validating the user's input.
+        //validating the user's input.
         confirm ('Your password will contain upper case letters, lower case letters, special characters, and numbers.');
         
-    //creating a loop associated with the number of characters the user has chosen.
+        //creating a loop associated with the number of characters the user has chosen.
         for (i=0; i< lengthVal; i++){
 
-    //creating a function to get a random character from allowed types.
+            //creating a function to get a random character from allowed types.
             function getRandomItem() {
                 const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+';  
                 return characters[Math.floor(Math.random() * 74)];    
             }
 
-    //Adding the result to the previously empty string.            
+            //Adding the result to the previously empty string.            
             pass += getRandomItem();
         }
 
+    //repeating the process until all possible outcomes are accounted for.    
     } else if (userUpper == true && userLower == false && userSpecial == true && userNumber == false) {
 
         confirm ('Your password will contain upper case letters, and special characters');
@@ -99,7 +92,21 @@ function generatePassword () {
             pass += getRandomItem();
         }
 
-    } else if (userUpper == true && userLower == true && userSpecial == false && userNumber == false) {
+    } else if (userUpper == true && userLower == true && userSpecial == false && userNumber == true) {
+
+        confirm ('Your password will contain upper case letters, lower case letters, and numbers.');
+        
+        for (i=0; i< lengthVal; i++){
+
+            function getRandomItem() {
+                const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';  
+                return characters[Math.floor(Math.random() * 62)];    
+            }
+
+            pass += getRandomItem();
+        }
+
+    }else if (userUpper == true && userLower == true && userSpecial == false && userNumber == false) {
 
         confirm ('Your password will contain upper case letters, and lower case letters.');
         
@@ -141,7 +148,21 @@ function generatePassword () {
             pass += getRandomItem();
         }
 
-    } else if (userUpper == false && userLower == true && userSpecial == false && userNumber == true) {
+    } else if (userUpper == true && userLower == false && userSpecial == true && userNumber == true) {
+
+        confirm ('Your password will contain upper case letters, numbers, and special characters');
+        
+        for (i=0; i< lengthVal; i++){
+
+            function getRandomItem() {
+                const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+0123456789';  
+                return characters[Math.floor(Math.random() * 48)];    
+            }
+
+            pass += getRandomItem();
+        }
+
+    }else if (userUpper == false && userLower == true && userSpecial == false && userNumber == true) {
 
         confirm ('Your password will contain lower case letters, and numbers.');
         
