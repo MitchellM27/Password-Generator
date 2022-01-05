@@ -246,6 +246,8 @@ function generatePassword () {
             pass += getRandomItem();
         }
 
+    } else {
+        confirm ('Please try again using the given parameters.');
     }
 
     //returning the now filled string to the function so that it can be delivered to the password.    
